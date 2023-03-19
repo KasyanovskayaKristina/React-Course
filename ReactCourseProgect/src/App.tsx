@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 import './App.css'
 import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import { NotFound } from './pages/NotFoundPage'
+import Home from './pages/Home/Home'
+import { NotFound } from './pages/NotFound/NotFoundPage'
 import { AboutUs } from './pages/About us/AboutUs'
 
 export class App extends React.Component {

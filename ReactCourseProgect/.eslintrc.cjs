@@ -13,12 +13,19 @@ module.exports = {
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: path.join(__dirname, 'tsconfig.eslint.json'),
-    tsconfigRootDir: '__dirname',
+"parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+        "sourceType": "module"
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  rules: {},
-};
+  rules: {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+
+}
