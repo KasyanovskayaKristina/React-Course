@@ -1,14 +1,15 @@
-import React from 'react'
-import { Header } from '../../components/Header/HeaderComponent'
+import React from 'react';
+import { Header } from '../../components/Header/HeaderComponent';
+import './AboutUs.css';
 export class AboutUs extends React.Component {
   render() {
     return (
-      <div>
+      <div className="about-page">
         <Header />
-        <div>
-          <h1>About Us Page</h1>
+        <div className="about">
+          <p>About Us Page</p>
         </div>
       </div>
-    )
+    );
   }
 }

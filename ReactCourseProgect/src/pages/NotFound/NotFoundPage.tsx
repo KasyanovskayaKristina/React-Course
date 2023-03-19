@@ -1,10 +1,10 @@
-import React from 'react'
-import { Header } from '../../components/Header/HeaderComponent'
-import './NotFoundPage.css'
+import React from 'react';
+import { Header } from '../../components/Header/HeaderComponent';
+import './NotFoundPage.css';
 export class NotFound extends React.Component {
   render() {
     return (
-      <div>
+      <div className="not-found">
         <div>
           <div>
             <Header />
@@ -17,6 +17,6 @@ export class NotFound extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

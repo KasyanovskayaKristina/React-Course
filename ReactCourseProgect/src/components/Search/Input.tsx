@@ -1,9 +1,8 @@
 import React from 'react';
-
-export default class InputForm extends React.Component<
-  {},
-  { [key: string]: string }
-> {
+import './Input.css';
+// eslint-disable-next-line @typescript-eslint/ban-types
+export default class InputForm extends React.Component<{}, { [key: string]: string }> {
+  // eslint-disable-next-line @typescript-eslint/ban-types
   constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = { value: localStorage.getItem('value') || '' };
@@ -23,7 +22,7 @@ export default class InputForm extends React.Component<
     return (
       <form onInput={this.handleFormSubmit}>
         <label>
-          {this.state.value}
+          <div className="label">{this.state.value}</div>
           <input
             type="text"
             value={this.state.value}

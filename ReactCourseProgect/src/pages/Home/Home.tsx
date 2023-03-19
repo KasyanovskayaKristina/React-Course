@@ -1,17 +1,16 @@
-import React from 'react'
-import { Cards } from '../../components/Cards/CardsComponent'
-import InputForm from '../../components/Search/Input'
-import { Header } from '../../components/Header/HeaderComponent'
+import React from 'react';
+import { Cards } from '../../components/Cards/CardsComponent';
+import { Header } from '../../components/Header/HeaderComponent';
+import './Home.css';
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <Header />
-        <InputForm />
         <Cards />
       </div>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
