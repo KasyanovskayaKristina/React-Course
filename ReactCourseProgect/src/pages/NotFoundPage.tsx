@@ -1,11 +1,16 @@
-import React from 'react';
-
+import React from 'react'
+import { Header } from '../components/Header/HeaderComponent'
 export class NotFound extends React.Component {
   render() {
     return (
       <div>
-        <h1>Error 404 not found Page</h1>
+        <div>
+          <h1>Error 404 not found Page</h1>
+        </div>
+        <div>
+          <Header />
+        </div>
       </div>
-    );
+    )
   }
 }

@@ -28,6 +28,7 @@ export default class InputForm extends React.Component<
             type="text"
             value={this.state.value}
             onChange={this.handleChange}
+            placeholder="Find:"
           />
         </label>
       </form>

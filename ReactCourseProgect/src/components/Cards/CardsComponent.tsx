@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import db from '../json/db.json';
-import { Button } from './button';
-console.log(db);
+import React, { Component } from 'react'
+import db from '../../json/db.json'
+import { Button } from '../Button/ButtonComponent'
+//console.log(db);
 
 export class Cards extends React.Component {
   state = {
     products: db,
-  };
+  }
 
   render() {
     return (
@@ -32,6 +32,6 @@ export class Cards extends React.Component {
           </div>
         ))}
       </div>
-    );
+    )
   }
 }
