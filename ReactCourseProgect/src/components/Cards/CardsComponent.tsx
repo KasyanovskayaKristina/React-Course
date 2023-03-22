@@ -2,7 +2,6 @@ import React from 'react';
 import db from '../../json/db.json';
 import { Button } from '../Button/ButtonComponent';
 import './CardComponent.css';
-//console.log(db);
 export class Cards extends React.Component {
   state = {
     products: db,
