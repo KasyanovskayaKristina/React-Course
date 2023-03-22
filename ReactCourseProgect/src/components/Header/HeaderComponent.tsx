@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavigateFunction } from 'react-router-dom';
 import './Header.css';
-import InputForm from '../Search/Input';
-export class Header extends React.Component {
-  render() {
+class Header extends React.Component<{
+  navigate: NavigateFunction;
+  location: string;
+}> {
+  render(): React.ReactNode {
     return (
       <header className="header">
-        <InputForm />
         <nav>
           <div className="header-nav">
             <Link to="/" className="nav">
@@ -17,7 +18,9 @@ export class Header extends React.Component {
             </Link>
           </div>
         </nav>
+        <p className="path">{this.props.location.slice(1, this.props.location.length)}</p>
       </header>
     );
   }
 }
+export default Header;

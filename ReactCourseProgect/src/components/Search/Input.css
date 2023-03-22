@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@600&display=swap');
 
-.label {
-    padding-right: 25px;
+.search-cont {
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
 }
 
-label {
-    display: flex;
-    flex-direction: row;
+.button {
+    margin-left: 10px;
 }
 
 input {
