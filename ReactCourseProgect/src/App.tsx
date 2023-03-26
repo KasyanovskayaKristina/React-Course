@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import { NotFound } from './pages/NotFound/NotFoundPage';
 import { AboutUs } from './pages/About us/AboutUs';
 import { NavigateFunction, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import FormPage from './pages/FormPage/FormPage';
+
 class App extends React.Component<{
   navigate: NavigateFunction;
   location: string;
@@ -16,6 +18,7 @@ class App extends React.Component<{
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Form" element={<FormPage />} />
         </Routes>
       </div>
     );

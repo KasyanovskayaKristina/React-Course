@@ -59,6 +59,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <Link to="/AboutUs" className="nav">
               About Us
             </Link>
+            <Link to="/Form" className="nav">
+              Form
+            </Link>
           </div>
         </nav>
         <div className="current-page-header">
