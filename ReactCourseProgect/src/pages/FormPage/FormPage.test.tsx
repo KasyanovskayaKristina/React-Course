@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import FormPage from './FormPage';
 
 describe('FormPage', () => {
-  it('renders correctly', () => {
-    const form = render(<FormPage />, { wrapper: BrowserRouter });
-    expect(form).toMatchSnapshot();
+  it('should have headline', () => {
+    render(<FormPage />, { wrapper: BrowserRouter });
+    expect(screen.getByText(/Login/i)).toBeInTheDocument();
   });
 });
