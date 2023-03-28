@@ -26,6 +26,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       case '/AboutUs':
         currentPageTitle = 'About Us Page';
         break;
+      case '/Form':
+        currentPageTitle = 'Form Page';
       default:
         currentPageTitle = '';
     }
