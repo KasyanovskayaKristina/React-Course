@@ -34,7 +34,7 @@ class FormPage extends React.Component {
     types: this.types,
   };
 
-  imageSRC = '';
+  //imageSRC = '';
   handleSubmit(event: React.ChangeEvent<HTMLFormElement>) {
     const fields = {
       name: (this.nameInputRefer.current as HTMLInputElement).value,
@@ -45,7 +45,6 @@ class FormPage extends React.Component {
       agree: (this.agreeCheckbox.current as HTMLInputElement).checked,
       imageSRC: (this.profileImgInput.current as HTMLInputElement).value,
     };
-    console.log(this.imageSRC);
     event.preventDefault();
     if (fields.name.length < 3) {
       this.setState({ isValidName: true });
@@ -67,7 +66,7 @@ class FormPage extends React.Component {
     } else {
       this.setState({ isValidGender: false });
     }
-    if (!this.imageSRC) {
+    if (!fields.imageSRC) {
       this.setState({ isValidImg: true });
     } else {
       this.setState({ isValidImg: false });
