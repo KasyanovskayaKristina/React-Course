@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+   "target": "es6",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["vite.config.ts",".eslintrc.cjs", "src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
