@@ -5,6 +5,6 @@ import FormPage from './FormPage';
 describe('FormPage', () => {
   it('should have headline', () => {
     render(<FormPage />, { wrapper: BrowserRouter });
-    expect(screen.getByText(/Login/i)).toBeInTheDocument();
+    expect(screen.getByText(/LogIn/i)).toBeInTheDocument();
   });
 });

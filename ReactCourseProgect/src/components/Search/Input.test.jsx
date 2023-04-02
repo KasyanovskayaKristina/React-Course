@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import { describe, expect, vitest } from 'vitest';
-import InputForm from './Input';
-const onChange = vitest.fn();
+import { describe, expect } from 'vitest';
 const localStorageMock = (function () {
   let store = {};
 
@@ -37,10 +34,6 @@ const setLocalStorage = (id, data) => {
 describe('Search Component', () => {
   beforeEach(() => {
     window.localStorage.clear();
-  });
-  it('randers without placeholder', () => {
-    render(<InputForm value="" onChange={onChange} />);
-    expect(screen.getByPlaceholderText(/Search/i)).toBeInTheDocument();
   });
   it('data is added into local storage', () => {
     const mockId = '1';

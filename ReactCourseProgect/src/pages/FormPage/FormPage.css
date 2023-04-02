@@ -25,9 +25,9 @@ h1 {
     color: white;
 }
 
-.gender__field {
+.form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -40,7 +40,7 @@ input {
 }
 
 .error {
-    color: red;
+    color: rgb(217, 255, 0);
 }
 
 .submit {

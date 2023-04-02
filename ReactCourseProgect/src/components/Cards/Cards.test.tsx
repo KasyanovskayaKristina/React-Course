@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Button from '../Button/ButtonComponent';
 import { describe } from 'vitest';
-import { Cards } from './CardsComponent';
+import Cards from './CardsComponent';
 
 describe('Cards', () => {
   it('should have text', () => {

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@600&display=swap');
+
+.cards-form {
+    width: 550px;
+    height: 450px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.title-cards {
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+}
