@@ -8,4 +8,7 @@ describe('Header', () => {
     render(<Header />, { wrapper: BrowserRouter });
     expect(screen.getByText(/Visiting:/i)).toBeInTheDocument();
   });
+  it('Should be defined', () => {
+    expect(<Header />).toBeDefined();
+  });
 });

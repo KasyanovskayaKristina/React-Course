@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import './Input.css';
 
 const InputForm = () => {
-  const [searchValue, setSearchValue] = useState(() => {
-    const saved = localStorage.getItem('searchValue')!;
-    const initialValue = JSON.parse(saved);
-    return initialValue || '';
-  });
-  useEffect(() => {
-    localStorage.setItem('searchValue', JSON.stringify(searchValue));
-  }, [searchValue]);
+  const input = useRef<HTMLInputElement>(null);
+  const [searchValue, setSearchValue] = useState(localStorage.getItem('searchValue') || '');
+
+  useLayoutEffect(() => {
+    const unmount = () => {
+      localStorage.setItem('searchValue', input.current!.value || '');
+    };
+    return () => {
+      unmount();
+    };
+  }, []);
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSearchValue(e.currentTarget.value);
+  };
   return (
     <div className="search-cont">
       <div>
@@ -19,13 +25,12 @@ const InputForm = () => {
           type="text"
           placeholder="Search"
           value={searchValue}
-          onChange={(event) => setSearchValue(event.target.value)}
+          ref={input}
+          onInput={handleInput}
         />
-        {searchValue && (
-          <button type="submit" className="button" onClick={() => setSearchValue('')}>
-            Search
-          </button>
-        )}
+        <button type="submit" className="button">
+          Search
+        </button>
       </div>
     </div>
   );
