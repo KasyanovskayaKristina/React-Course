@@ -5,6 +5,7 @@ const FormCards = ({ firstName, date, country, avatar }: Cards) => {
   return (
     <div>
       <div>
+        <h1>Submit a New Card</h1>
         <div className="cards-form">
           <p className="title-cards">Name: {firstName}</p>
           <p className="title-cards">Birthday: {date}</p>

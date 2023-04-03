@@ -57,7 +57,11 @@ const FormPage = () => {
           <input
             placeholder="First Name"
             type="text"
-            {...register('firstName', { required: true, maxLength: 10, minLength: 1 })}
+            {...register('firstName', {
+              required: true,
+              maxLength: 10,
+              minLength: 1,
+            })}
           />
         </Form.Field>
         <Form.Field>

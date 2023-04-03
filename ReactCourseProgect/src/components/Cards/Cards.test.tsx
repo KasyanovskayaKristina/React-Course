@@ -12,4 +12,7 @@ describe('Cards', () => {
     const { getByText } = render(<Button />);
     expect(getByText('ADD TO BAG')).toBeTruthy();
   });
+  it('Should be defined', () => {
+    expect(<Cards />).toBeDefined();
+  });
 });
