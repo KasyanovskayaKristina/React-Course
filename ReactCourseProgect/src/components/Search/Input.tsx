@@ -4,7 +4,6 @@ import './Input.css';
 const InputForm = () => {
   const input = useRef<HTMLInputElement>(null);
   const [searchValue, setSearchValue] = useState(localStorage.getItem('searchValue') || '');
-
   useLayoutEffect(() => {
     const unmount = () => {
       localStorage.setItem('searchValue', input.current!.value || '');
@@ -13,9 +12,11 @@ const InputForm = () => {
       unmount();
     };
   }, []);
+
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchValue(e.currentTarget.value);
   };
+
   return (
     <div className="search-cont">
       <div>

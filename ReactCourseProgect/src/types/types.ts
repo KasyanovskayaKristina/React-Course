@@ -7,3 +7,9 @@ export type Cards = {
 };
 
 export default Cards;
+
+export type Info = {
+  active: boolean;
+  SetActive: React.Dispatch<React.SetStateAction<boolean>>;
+  id: number | null;
+};

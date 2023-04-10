@@ -1,18 +1,21 @@
-import { render, screen } from '@testing-library/react';
-import Button from '../Button/ButtonComponent';
-import { describe } from 'vitest';
+import React from 'react';
 import Cards from './CardsComponent';
-
-describe('Cards', () => {
-  it('should have text', () => {
-    render(<Cards />);
-    expect(screen.getAllByText(/SHIPPING AND RETURNS/i)).toBeTruthy();
-  });
-  it('has the correct title in the button', () => {
-    const { getByText } = render(<Button />);
-    expect(getByText('ADD TO BAG')).toBeTruthy();
-  });
-  it('Should be defined', () => {
-    expect(<Cards />).toBeDefined();
+import { render } from '@testing-library/react';
+describe('Cards component', () => {
+  it('should render card info correctly', () => {
+    const { getByText } = render(
+      <Cards
+        id={0}
+        gender={''}
+        status={''}
+        created={''}
+        episode={''}
+        name={'Rick Sanchez'}
+        image={'https://rickandmortyapi.com/api/character/avatar/1.jpeg'}
+        species={'Human'}
+      />
+    );
+    expect(getByText('Rick Sanchez')).toBeInTheDocument();
+    expect(getByText('Human')).toBeInTheDocument();
   });
 });
